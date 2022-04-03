@@ -1,0 +1,49 @@
+1 ~= 2    not equal
+1:0.1:2    form a n*1 matrix like [0 0.1 0.2 ... 1]
+ones(1,2)    [1 1]
+2*ones(1,2)    [2 2]
+zeros(1,2)    [0 0]
+rand(1,2)    random assign values to matrix
+eye(2)    [1 0; 0 1] Identity matrix
+size(A)    return rows, columns / size(A, 1)    return rows / size(A, 2)    return colums
+length(A)    return larger value of rows and columns
+who    show all variables name
+whos    show all variables and sizes
+clear xx    delete variable
+save A.mat A    save variable
+save A.text A -ascii
+A(2, :)    every element in the second row
+A([1 2],:)    return 1st and 2nd row
+A=[A,[1:2]]    append another column
+A(:)    put all elements of A into a single vector
+C=[A B]    join 2 matrices by column
+C=[A; B]    join 2 matrices by row
+
+A .* B    dot product
+a .^ 2    dot pow
+log(A)
+exp(A)    e^A
+abs(A)
+A'    transpose
+[val, ind] = max(A)    val=max value, ind=max value index
+A<0    compare each element
+find(A<0)    index
+floor(A)    find int downward
+ceil(A)    find int upward
+pinv(A)    sudo invert
+
+plot(t,y)
+hold on
+xlabel('time')
+legend('sin','cos')    label the line
+title('my plot')
+print -dpng 'myPlot.png'
+imagesc(A)    visualize matrix
+
+for i=1:10, v(i)=2^i; end;
+i=1; while i<= 5, v(i)=100; i=i+1; end
+i=1; while true, v(i)=999; i=i+1;if i==6,break;end;end;
+if a==1,xxx; elseif a==2, xxx; else,xxx;end;
+function y=squarethisnumber(x)
+  y=x^2;
+function [y1,y2]=squarethisnumber(x)
